@@ -1,0 +1,21 @@
+{
+  "name": "DS1307ESP",
+  "version": "1.0.0",
+  "keywords": "ESP32, ESP8266, ESP01, RTC DS1307",
+  "description": "An Arduino library for setting and retrieving RTC DS1307 on ESP32 ESP8266 ESP01 boards",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/3tawi/DS1307ESP"
+  },
+  "authors":
+  [
+    {
+        "name": "3tawi",
+        "youtube": "https://www.youtube.com/c/GreatProjects",
+        "maintainer": true
+    }
+  ],
+  "frameworks": "DS1307",
+  "platforms": "esp32","esp8266","esp01"
+}

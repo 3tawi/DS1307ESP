@@ -1,0 +1,32 @@
+DS1307ESP		KEYWORD1
+******************
+DS1307
+*******************
+begin		        KEYWORD2
+DSadjust		KEYWORD2
+DSread			KEYWORD2
+**********************
+SetFont			KEYWORD2
+setTime			KEYWORD2
+getTime			KEYWORD2
+setTime			KEYWORD2
+getTime			KEYWORD2
+getDateTime		KEYWORD2
+getTimeDate		KEYWORD2
+getDate			KEYWORD2
+getAmPm			KEYWORD2
+getEpoch		KEYWORD2
+getSecond		KEYWORD2
+getMinute		KEYWORD2
+getHour			KEYWORD2
+getDay			KEYWORD2
+getDayofWeek     	KEYWORD2
+getDayofYear	        KEYWORD2
+getMonth		KEYWORD2
+getYear			KEYWORD2
+hour			KEYWORD2
+dayOfMonth		KEYWORD2
+month			KEYWORD2
+year			KEYWORD2
+dayOfWeek		KEYWORD2
+DayofYear		KEYWORD2
