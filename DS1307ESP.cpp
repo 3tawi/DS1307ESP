@@ -86,6 +86,12 @@ String DS1307ESP::getDate(bool mode){
   return String(s);
 }
 
+String DS1307ESP::getDayDate(){
+  char s[12];
+  sprintf(s, "%04d-%02d-%02d", year+2000, month, dayOfMonth);
+  return String(s);
+}
+
 String DS1307ESP::getTime(bool mode){
   char s[10];
   if (mode)
