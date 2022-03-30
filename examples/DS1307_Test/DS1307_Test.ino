@@ -38,8 +38,8 @@ void updateTime()
       Serial.println(rtc.getDateTime(true));  //  (String) Monday, 14-March-2022 00:09:21
       Serial.println(rtc.getTimeDate());      //  (String) 12:07:18 Mon, 14 Mar 2022
       Serial.println(rtc.getTimeDate(true));  //  (String) 00:00:03 Monday, 14-March-2022
+      Serial.println(rtc.getDayDate());       //  (String) 2022-03-14
       Serial.println(""); 
-      Serial.println(rtc.getEpoch());         //  (long)    1647216003
       Serial.println(rtc.getSecond());        //  (String)     30    (00-59)
       Serial.println(rtc.getMinute());        //  (String)     58    (00-59)
       Serial.println(rtc.getHour());          //  (String)     12    (01-12)
@@ -53,8 +53,9 @@ void updateTime()
       Serial.println(rtc.getAmPm());          //  (String)  pm
       Serial.println(rtc.getAmPm(true));      //  (String)  PM
       Serial.println(""); 
-      Serial.println(rtc.getSecond());        //  (int)     30    (0-59)
-      Serial.println(rtc.getMinute());        //  (int)     58    (0-59)
+      Serial.println(rtc.getEpoch());         //  (long)    1647216003
+      Serial.println(rtc.second);             //  (int)     30    (0-59)
+      Serial.println(rtc.minute);             //  (int)     58    (0-59)
       Serial.println(rtc.hour);               //  (int)     0     (0-23)
       Serial.println(rtc.dayOfMonth);         //  (int)     14    (1-31)
       Serial.println(rtc.month);              //  (int)     3     (1-12)
