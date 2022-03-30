@@ -63,6 +63,7 @@ class DS1307ESP {
     String getMihmin(bool mode);
     String getYear();
     String getDay();
+    String getDayDate();
     String getMonth(bool mode = false);
     String getHour(bool mode = false);
     String getMinute();
