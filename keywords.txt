@@ -14,6 +14,7 @@ getTime			KEYWORD2
 getDateTime		KEYWORD2
 getTimeDate		KEYWORD2
 getDate			KEYWORD2
+getDayDate			KEYWORD2
 getAmPm			KEYWORD2
 getEpoch		KEYWORD2
 getSecond		KEYWORD2
@@ -25,6 +26,8 @@ getDayofYear	        KEYWORD2
 getMonth		KEYWORD2
 getYear			KEYWORD2
 hour			KEYWORD2
+second		KEYWORD2
+minute		KEYWORD2
 dayOfMonth		KEYWORD2
 month			KEYWORD2
 year			KEYWORD2
