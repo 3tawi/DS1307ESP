@@ -36,6 +36,8 @@ class DS1307ESP {
                long time2long(uint16_t days, uint8_t h, uint8_t m, uint8_t s);
                void DSwrite();
   public:
+    uint8_t read(uint8_t addr);
+    void write(uint8_t addr, uint8_t val);
     void DSadjust(uint8_t _hour, uint8_t _minute, uint8_t _second, uint16_t _year, uint8_t _month, uint8_t _day);
     void SetFont(int fon);
     void begin();
