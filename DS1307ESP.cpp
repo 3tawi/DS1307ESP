@@ -6,6 +6,30 @@
 #include <Wire.h>
 
 
+static uint8_t _read(int dev, uint8_t addr) {
+    Wire.beginTransmission(dev);
+    Wire.write(addr);
+    Wire.endTransmission();
+    Wire.requestFrom(dev, 1);
+    uint8_t s = Wire.read();
+    return s;
+}
+
+static void _write(int dev, uint8_t addr, uint8_t val) {
+    Wire.beginTransmission(dev);
+    Wire.write(addr);
+    Wire.write(val);
+    Wire.endTransmission();
+}
+
+uint8_t DS1307ESP::read(uint8_t addr) {
+    return _read(DS1307_I2C_ADDRESS, addr);
+}
+
+void DS1307ESP::write(uint8_t addr, uint8_t val) {
+    _write(DS1307_I2C_ADDRESS, addr, val);
+}
+
 uint16_t DS1307ESP::yeardays(uint16_t y, uint8_t m, uint8_t d) {
     if (y >= 2000)
         y -= 2000;
