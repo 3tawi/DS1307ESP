@@ -267,6 +267,7 @@ void DS1307ESP::DSread() {
     month      = bcdToDec(Wire.read());
     year       = bcdToDec(Wire.read());
     DayofYear  = yeardays(year, month, dayOfMonth);
+    dayOfWeek  %=  7;
 }
 
 void DS1307ESP::DSwrite() {
