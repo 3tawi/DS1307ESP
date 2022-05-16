@@ -2,7 +2,6 @@
 //An Arduino library for setting and retrieving RTC DS1307 on ESP32 ESP8266 ESP01 boards
 //Testing of the ESP32 ESP8266 ESP8266–01 ESP 01 module by DS1307ESP library https://youtu.be/s3upvC23QGY
 
-
 #ifndef DS1307ESP_H
 #define DS1307ESP_H
 
@@ -18,7 +17,7 @@ const String daytostrFullEN[7]    ={"Sunday", "Monday", "Tuesday", "Wednesday", 
 const String daytostrEN[7]        ={"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 
 const String MonthtostrFullFR[12] ={"Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"};
-const String MonthtostrFR[12]     ={"Jan", "Fev", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+const String MonthtostrFR[12]     ={"Jan", "Fév", "Mar", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Déc"};
 const String daytostrFullFR[7]    ={"Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"};
 const String daytostrFR[7]        ={"Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"} ; 
 
@@ -26,6 +25,11 @@ const String MonthtostrFullGR[12] ={"Januar", "Februar", "März", "April", "Mai"
 const String MonthtostrGR[12]     ={"Jan", "Feb", "März", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"};
 const String daytostrFullGR[7]    ={"Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"};
 const String daytostrGR[7]        ={"So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"}; 
+
+const String MonthtostrFullES[12] ={"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+const String MonthtostrES[12]     ={"Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"};
+const String daytostrFullES[7]    ={"Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"};
+const String daytostrES[7]        ={"Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"}; 
 
 class DS1307ESP {
        private:
@@ -79,3 +83,4 @@ class DS1307ESP {
 };
 
 #endif
+
