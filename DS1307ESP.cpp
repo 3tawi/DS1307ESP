@@ -8,7 +8,7 @@
 
 static uint8_t _read(int dev, uint8_t addr) {
     Wire.beginTransmission(dev);
-    Wire.write(addr);
+    Wire.write(addr+0x08);
     Wire.endTransmission();
     Wire.requestFrom(dev, 1);
     uint8_t s = Wire.read();
@@ -17,7 +17,7 @@ static uint8_t _read(int dev, uint8_t addr) {
 
 static void _write(int dev, uint8_t addr, uint8_t val) {
     Wire.beginTransmission(dev);
-    Wire.write(addr);
+    Wire.write(addr+0x08);
     Wire.write(val);
     Wire.endTransmission();
 }
@@ -212,7 +212,7 @@ void DS1307ESP::begin(uint8_t sda, uint8_t scl) {
 }
 
 void DS1307ESP::SetFont(int fon) {
-   if(fon > 2 || fon < 0) { fon = 0; }
+    fon %=4;
     switch (fon) { 
       case 0:
        for(int i=0; i < 12; i++) {
@@ -247,6 +247,17 @@ void DS1307ESP::SetFont(int fon) {
       }
       break;
 
+      case 3:
+       for(int i=0; i < 12; i++) {
+  MonthtostrFull[i] = MonthtostrFullES[i];
+  Monthtostr[i] = MonthtostrES[i];
+  if(i < 7) {
+  daytostrFull[i] = daytostrFullES[i];
+  daytostr[i] = daytostrES[i];
+      }
+      }
+      break;
+
       default:
       break;
       }
@@ -267,7 +278,7 @@ void DS1307ESP::DSread() {
     month      = bcdToDec(Wire.read());
     year       = bcdToDec(Wire.read());
     DayofYear  = yeardays(year, month, dayOfMonth);
-    dayOfWeek  %=  7;
+    dayOfWeek %= 7;
 }
 
 void DS1307ESP::DSwrite() {
